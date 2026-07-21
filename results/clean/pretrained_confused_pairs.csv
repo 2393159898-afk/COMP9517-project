@@ -1,0 +1,21 @@
+true_idx,true_label,pred_idx,pred_label,count
+203,Platalea leucorodia,202,Platalea flavipes,4
+242,Gopherus agassizii,243,Testudo graeca,4
+372,Phlox hoodii,370,Leptosiphon nuttallii,4
+176,Quiscalus quiscula,166,Corvus frugilegus,4
+118,Trithemis kirbyi,117,Trithemis annulata,3
+320,Dittrichia graveolens,322,Erigeron canadensis,3
+340,Pholistoma membranaceum,484,Micranthes californica,3
+238,Uta stansburiana,237,Urosaurus ornatus,3
+67,Icaricia icarioides,68,Lycaena helloides,3
+395,Quercus alba,396,Quercus buckleyi,3
+103,Agriocnemis femina,105,Ischnura denticollis,3
+98,Aglossa pinguinalis,49,Idia lubricalis,3
+385,Lotus corniculatus,386,Lotus pedunculatus,3
+89,Polygonia c-album,90,Polygonia faunus,3
+90,Polygonia faunus,89,Polygonia c-album,2
+91,Texola elada,89,Polygonia c-album,2
+327,Isocoma acradenia,320,Dittrichia graveolens,2
+436,Magnolia tripetala,483,Hamamelis virginiana,2
+195,Sicalis luteola,169,Emberiza hortulana,2
+87,Nymphalis antiopa,83,Hipparchia statilinus,2
