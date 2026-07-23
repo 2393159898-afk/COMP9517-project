@@ -141,15 +141,18 @@ def predict_variant(
     for batch_index, (images, labels, image_paths) in enumerate(loader, start=1):
         images = images.to(device, non_blocking=True)
         logits = model(images)
+        probs = torch.softmax(logits, dim=1)
         top5 = logits.topk(k=min(5, logits.shape[1]), dim=1).indices.cpu()
         pred = top5[:, 0]
+        top1_confidence = probs.gather(1, pred.to(device).unsqueeze(1)).squeeze(1).cpu()
         labels = labels.cpu()
 
-        for path, true_idx, pred_idx, top5_row in zip(
+        for path, true_idx, pred_idx, top5_row, confidence in zip(
             image_paths,
             labels.tolist(),
             pred.tolist(),
             top5.tolist(),
+            top1_confidence.tolist(),
         ):
             rows.append(
                 {
@@ -157,6 +160,7 @@ def predict_variant(
                     "true_idx": int(true_idx),
                     "pred_idx": int(pred_idx),
                     "top5_idx": " ".join(str(int(value)) for value in top5_row),
+                    "top1_confidence": float(confidence),
                 }
             )
 
