@@ -1,76 +1,260 @@
-# Member C Handoff: From-Scratch ResNet18
+# COMP9517 Group Project
 
-This package contains Member C's trained model and experimental outputs.
-The Jupyter Notebook is intentionally not included and can be added separately.
+This repository contains the shared implementation and experimental results for fine-grained species classification on a fixed 500-class subset of the iNaturalist-2021 Mini dataset.
 
-## Method
+Three complete methods are compared:
 
-- Architecture: ResNet18
-- Initialization: random (`weights=None`)
-- Classes: 500
-- Training images: 20,000
-- Validation images: 5,000
-- Test images: 5,000
-- Input size: 224 × 224
-- Optimizer: AdamW
-- Initial learning rate: 0.0003
-- Weight decay: 0.0001
-- Batch size: 16
-- Scheduler: CosineAnnealingLR
-- Selected checkpoint: `results/models/scratch_aug_best.pth`
-- Selected validation epoch: 28
+1. **Traditional:** SIFT + Bag-of-Visual-Words + SVM
+2. **From scratch:** ResNet18 trained from random initialisation
+3. **Transfer learning:** ImageNet-pretrained ResNet18 with full fine-tuning
 
-## Augmentation Ablation
+The project also includes robustness analysis, error analysis and Grad-CAM. All methods use the same fixed train/validation/test split and the same remapped `class_idx` label space.
 
-| Setting | Val Top-1 | Val Top-5 | Val Macro F1 | Best epoch |
-|---|---:|---:|---:|---:|
-| No augmentation | 21.54% | 43.42% | 21.42% | 16 |
-| With augmentation | 31.94% | 56.74% | 30.06% | 28 |
+---
 
-Absolute improvements from augmentation:
+## 1. Project Structure
 
-- Top-1: +10.40 percentage points
-- Top-5: +13.32 percentage points
-- Macro F1: +8.65 percentage points
+```text
+COMP9517-project/
+├── data/
+│   ├── raw/                          # Local dataset, not submitted
+│   └── splits/                       # Fixed 500-class split
+├── notebooks/
+│   ├── A1_dataset_split_and_interface_check.ipynb
+│   ├── A2_evaluation_and_robustness_summary.ipynb
+│   ├── B_traditional_model.ipynb
+│   ├── C_From_Scratch_ResNet.ipynb
+│   └── D_pretrained_model.ipynb
+├── reports/
+├── results/
+│   ├── clean/
+│   ├── logs/
+│   ├── robustness/
+│   └── figures/
+├── src/
+├── PROJECT_TEAM_GUIDE_CN.md
+├── requirements.txt
+└── README.md
+```
 
-The no-augmentation model reached approximately 99.93% training accuracy,
-indicating severe overfitting.
+---
 
-## Clean Test Results
+## 2. Dataset Placement
 
-- Top-1 accuracy: 32.10%
-- Top-5 accuracy: 57.66%
-- Macro precision: 30.45%
-- Macro recall: 32.10%
-- Macro F1: 29.73%
+The raw dataset is not included. Place it locally as:
 
-## Robustness Summary
+```text
+data/raw/
+├── train_mini/
+├── val/
+├── train_mini.json
+└── val.json
+```
 
-Strongest severity results:
+Do not create an extra `train_mini/train_mini` or `val/val` directory layer.
 
-| Degradation | Severity | Top-1 | Macro F1 |
+The fixed split files are already under `data/splits/`. The CSVs contain paths and labels, but the images must still exist under `data/raw/` when training or displaying examples.
+
+---
+
+## 3. Fixed Dataset Split
+
+Random seed: `9517`
+
+| Split | Images/class | Total | Source |
+|---|---:|---:|---|
+| Train | 40 | 20,000 | `train_mini` |
+| Validation | 10 | 5,000 | `train_mini` |
+| Test | 10 | 5,000 | official validation split |
+
+Important files:
+
+```text
+data/splits/selected_classes.txt
+data/splits/class_to_idx.json
+data/splits/idx_to_class.json
+data/splits/split_summary.json
+data/splits/train_paths.csv
+data/splits/val_paths.csv
+data/splits/test_paths.csv
+```
+
+Each split CSV contains:
+
+```text
+image_path,image_id,category_id,label,class_idx,split
+```
+
+All models must use `class_idx` from `0` to `499`.
+
+`selected_classes.txt` stores:
+
+```text
+class_idx    original_category_id    scientific_species_name
+```
+
+`idx_to_class.json` stores the original category ID as a string. Use `selected_classes.txt` or the split CSV `label` column when scientific names are required.
+
+---
+
+## 4. Environment
+
+```bash
+pip install -r requirements.txt
+```
+
+PyTorch users should install a build suitable for their CPU, CUDA or Apple Silicon environment. On Windows, begin with `num_workers=0`.
+
+---
+
+## 5. Shared Dataloader
+
+```python
+from src.dataset import make_loader
+
+train_loader = make_loader(
+    csv_path="data/splits/train_paths.csv",
+    split="train",
+    batch_size=32,
+    image_size=224,
+    num_workers=0,
+    augment=True,
+)
+```
+
+Expected batch shapes:
+
+```text
+images: [batch_size, 3, 224, 224]
+labels: [batch_size]
+```
+
+---
+
+## 6. Prediction Interface
+
+Clean predictions:
+
+```text
+results/clean/traditional_predictions.csv
+results/clean/scratch_predictions.csv
+results/clean/pretrained_predictions.csv
+```
+
+Degraded predictions:
+
+```text
+results/robustness/predictions/{model}_{degradation}_{severity}_predictions.csv
+```
+
+Format:
+
+```text
+image_path,true_idx,pred_idx,top5_idx
+```
+
+All indices must use the shared `0–499` `class_idx` mapping.
+
+---
+
+## 7. Clean Test Results
+
+| Model | Top-1 | Top-5 | Macro-F1 |
 |---|---:|---:|---:|
-| Gaussian noise | 0.20 | 17.28% | 15.88% |
-| Gaussian blur | 7 | 15.46% | 13.47% |
-| Brightness | 0.40 | 20.94% | 19.63% |
-| Contrast | 0.40 | 18.16% | 17.99% |
-| JPEG quality | 20 | 30.36% | 28.15% |
+| Traditional SIFT + BoVW + SVM | 10.74% | 23.04% | 9.82% |
+| Scratch ResNet18 | 32.10% | 57.66% | 29.73% |
+| Pretrained ResNet18 | 68.24% | 86.98% | 67.95% |
 
-The model was most sensitive to strong blur and comparatively robust to JPEG compression.
+---
 
-## Package Contents
+## 8. Robustness Evaluation
 
-- `results/models/`: selected checkpoint
-- `results/logs/`: training logs, summaries, and ablation table
-- `results/figures/`: training and robustness plots
-- `results/clean/`: clean per-image predictions and complete metrics
-- `results/robustness/predictions/`: 15 degraded-test prediction files
-- `results/robustness/metrics/`: 15 degraded-test metric files
-- `reports/`: optional experiment summary
+Robustness is evaluated only at test time. Models are not retrained on degraded test images.
 
-## Integration Notes
+```text
+noise:      0.05, 0.10, 0.20
+blur:       3, 5, 7
+brightness: 0.8, 0.6, 0.4
+contrast:   0.8, 0.6, 0.4
+jpeg:       70, 40, 20
+```
 
-- Preserve the existing directory structure when merging into the team project.
-- Do not overwrite newer files produced by other members.
-- The checkpoint is for internal reproduction, analysis, and demonstration.
-- Remove `.pth` files and large prediction files from the final course code ZIP if required by the submission size limit.
+Each model has one clean baseline and 15 degraded conditions. Across three models this gives 48 conditions.
+
+Rebuild the unified summary:
+
+```bash
+python src/summarize_robustness.py     --clean-dir results/clean     --metrics-dir results/robustness/metrics     --out-csv results/robustness/combined_robustness_results.csv
+```
+
+The main integration notebook is:
+
+```text
+notebooks/A2_evaluation_and_robustness_summary.ipynb
+```
+
+It performs input validation, shared-test verification, clean comparison, degradation visualisation, robustness curves, absolute drop, retention, heatmaps, ranking, prediction-transition analysis, per-class sensitivity and representative failure analysis.
+
+---
+
+## 9. Notebook Order
+
+```text
+A1_dataset_split_and_interface_check.ipynb
+B_traditional_model.ipynb
+C_From_Scratch_ResNet.ipynb
+D_pretrained_model.ipynb
+A2_evaluation_and_robustness_summary.ipynb
+```
+
+---
+
+## 10. Member Responsibilities
+
+### Member A
+Dataset split, dataloader/evaluation interface, robustness protocol, unified metrics, 48-condition integration, visualisation and A1/A2 notebooks.
+
+### Member B
+SIFT, Bag-of-Visual-Words, SVM, and traditional clean/degraded predictions.
+
+### Member C
+From-scratch ResNet18, augmentation ablation, training analysis, and clean/degraded predictions.
+
+### Member D
+ImageNet-pretrained ResNet18, freeze/fine-tune comparison, and clean/degraded predictions.
+
+### Member E
+Confusion analysis, difficult species pairs, Grad-CAM and integrated failure discussion.
+
+---
+
+## 11. Final Submission Exclusions
+
+Do not include the raw dataset, model weights or generated result images in the final code ZIP.
+
+```text
+data/raw/
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.npy
+*.npz
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.gif
+*.zip
+*.tar
+*.gz
+*.7z
+results/models/
+results/features/
+results/figures/
+results/robustness/predictions/
+__pycache__/
+.ipynb_checkpoints/
+```
+
+Keep code, notebooks, split files, small summary CSV/JSON files and documentation.

@@ -1,0 +1,7 @@
+- Clean performance ranking: Pretrained ResNet18 (68.24%) > Scratch ResNet18 (32.10%) > Traditional (10.74%).
+- Across the three models, noise causes the largest mean Top-1 drop at the strongest severity (24.80 percentage points).
+- Traditional's largest strongest-severity drop is under blur 7.0: 9.84 percentage points lost, with 8.38% retained.
+- Scratch ResNet18's largest strongest-severity drop is under blur 7.0: 16.64 percentage points lost, with 48.16% retained.
+- Pretrained ResNet18's largest strongest-severity drop is under noise 0.2: 52.76 percentage points lost, with 22.68% retained.
+- Small score increases above the clean baseline occur for Scratch ResNet18 on brightness 0.8; Pretrained ResNet18 on brightness 0.8. These should be treated as evaluation variation rather than evidence that degradation reliably improves the model.
+- The largest proportional loss of clean-correct predictions is Traditional under blur 7: 98.32% of its clean-correct predictions become wrong (528 of 537 images).
