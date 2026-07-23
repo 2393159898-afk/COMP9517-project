@@ -56,7 +56,9 @@ The pretrained model is far more robust than the scratch model in absolute terms
 
 ## Files for Member E (Grad-CAM / error analysis)
 
-- Checkpoint: `results/models/pretrained_finetune_best.pth`
+- Checkpoint: `results/models/pretrained_finetune_best.pth` (131 MB, not committed to git — excluded by `.gitignore` and over GitHub's 100 MB push limit). Download from the project's GitHub Release instead:
+  `https://github.com/2393159898-afk/COMP9517-project/releases/download/d-pretrained-checkpoint/pretrained_finetune_best.pth`
+  Save it to `results/models/pretrained_finetune_best.pth` in your local checkout before loading it.
 - Architecture: `src/pretrained_model.py` (`build_pretrained_resnet18`)
 - Class mapping: `data/splits/selected_classes.txt`, `data/splits/idx_to_class.json`, `data/splits/class_to_idx.json`
 - Correct examples (30, random sample): `results/clean/pretrained_correct_examples.csv`
