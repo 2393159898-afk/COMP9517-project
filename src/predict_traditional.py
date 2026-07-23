@@ -118,29 +118,43 @@ def predict_and_save(df: pd.DataFrame, feats: np.ndarray, svm, out_path: str,
     """Run SVM prediction (top-1 and top-5 via decision_function) and
     write results to a CSV in the required format.
 
+    Also computes a top1_confidence column via svm.predict_proba() (the model
+    was trained with probability=True, so this works without retraining).
+    Confidence is looked up for the specific class chosen by decision_function
+    (via svm.classes_), not just the argmax of predict_proba, so pred_idx and
+    top1_confidence always refer to the same class even in the rare case the
+    two ranking methods would disagree.
+
     NOTE: sklearn's SVC.decision_function() internally computes a
     one-vs-one score matrix of shape (n_samples, n_classes*(n_classes-1)/2)
     regardless of decision_function_shape. With 500 classes this is
     124,750 columns; calling it on all 5000 test images at once requires
     ~4.65 GB and raises ArrayMemoryError on memory-constrained machines.
-    We therefore call decision_function in small batches and concatenate
-    the resulting top-1 / top-5 predictions (not the raw score matrices),
-    which keeps peak memory low without changing the total computation.
+    We therefore call decision_function (and predict_proba) in small batches
+    and concatenate the resulting top-1 / top-5 / confidence values (not the
+    raw score matrices), which keeps peak memory low without changing the
+    total computation.
     """
     classes = svm.classes_
     n = feats.shape[0]
 
     pred_idx_all = np.zeros(n, dtype=np.int64)
     top5_idx_all = np.zeros((n, TOP_K), dtype=np.int64)
+    confidence_all = np.zeros(n, dtype=np.float64)
 
     for start in range(0, n, batch_size):
         end = min(start + batch_size, n)
         batch_scores = svm.decision_function(feats[start:end])  # (batch, n_classes)
+        batch_proba = svm.predict_proba(feats[start:end])       # (batch, n_classes)
 
-        pred_idx_all[start:end] = classes[np.argmax(batch_scores, axis=1)]
+        batch_pred_idx = np.argmax(batch_scores, axis=1)
+        pred_idx_all[start:end] = classes[batch_pred_idx]
 
         top5_order = np.argsort(-batch_scores, axis=1)[:, :TOP_K]
         top5_idx_all[start:end] = classes[top5_order]
+
+        # confidence = predicted probability of the class actually chosen above
+        confidence_all[start:end] = batch_proba[np.arange(end - start), batch_pred_idx]
 
     rows = []
     for i, row in enumerate(df.itertuples()):
@@ -150,6 +164,7 @@ def predict_and_save(df: pd.DataFrame, feats: np.ndarray, svm, out_path: str,
             "true_idx": row.class_idx,
             "pred_idx": int(pred_idx_all[i]),
             "top5_idx": top5_str,
+            "top1_confidence": float(confidence_all[i]),
         })
 
     out_df = pd.DataFrame(rows)
