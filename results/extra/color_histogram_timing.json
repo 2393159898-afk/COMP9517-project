@@ -1,0 +1,7 @@
+{
+  "train_feature_extraction_sec": 1.852048635482788,
+  "test_feature_extraction_sec": 0.41016650199890137,
+  "svm_train_sec": 64.36836767196655,
+  "predict_sec": 177.98919463157654,
+  "total_sec": 244.61977744102478
+}
