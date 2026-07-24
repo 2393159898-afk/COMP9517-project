@@ -1,0 +1,21 @@
+image_path,true_idx,pred_idx,top5_idx,top1_confidence,true_species,top1_correct,top5_correct
+data\raw\val\07831_Plantae_Tracheophyta_Magnoliopsida_Ericales_Polemoniaceae_Phlox_hoodii\7ce21c16-ef6d-434c-99e3-05909a0f6a2e.jpg,372,370,370 328 372 336 329,0.9256449341773988,Phlox hoodii,False,True
+data\raw\val\08936_Plantae_Tracheophyta_Magnoliopsida_Malvales_Malvaceae_Callirhoe_pedata\521159f0-6f08-456a-8236-42f370e3d343.jpg,446,260,260 485 446 265 471,0.9190552830696106,Callirhoe pedata,False,True
+data\raw\val\02704_Animalia_Arthropoda_Malacostraca_Decapoda_Cancridae_Cancer_borealis\ee3a99bf-2c77-4b2a-a98e-e0efff4d9ced.jpg,123,245,245 123 276 124 252,0.8967090249061584,Cancer borealis,False,True
+data\raw\val\01536_Animalia_Arthropoda_Insecta_Lepidoptera_Lycaenidae_Strymon_melinus\2235e6ad-b804-4b6d-b681-8d21d8c396a0.jpg,71,84,84 66 71 111 85,0.8965291380882263,Strymon melinus,False,True
+data\raw\val\01536_Animalia_Arthropoda_Insecta_Lepidoptera_Lycaenidae_Strymon_melinus\5600e3fe-08c2-47c6-a3b1-74f1b9d3e373.jpg,71,336,336 71 321 329 370,0.8876050710678101,Strymon melinus,False,True
+data\raw\val\03206_Animalia_Chordata_Aves_Anseriformes_Anatidae_Anas_zonorhyncha\432555c2-807b-4daf-a03e-6c201804cd6b.jpg,151,150,150 151 216 159 154,0.8829996585845947,Anas zonorhyncha,False,True
+data\raw\val\07616_Plantae_Tracheophyta_Magnoliopsida_Cornales_Loasaceae_Petalonyx_thurberi\ca2f0812-44b1-4fa3-9b09-256b3db90ae5.jpg,359,463,463 380 359 370 331,0.8565778136253357,Petalonyx thurberi,False,True
+data\raw\val\04766_Animalia_Chordata_Mammalia_Monotremata_Ornithorhynchidae_Ornithorhynchus_anatinus\7ba22ef1-b567-4d2c-925a-caa07ac7c0a3.jpg,219,104,104 219 128 110 177,0.8561819791793823,Ornithorhynchus anatinus,False,True
+data\raw\val\01958_Animalia_Arthropoda_Insecta_Lepidoptera_Nymphalidae_Polygonia_faunus\c9652c0f-9a87-41c6-9abc-8d2f33e903ea.jpg,90,89,89 92 90 68 84,0.8436739444732666,Polygonia faunus,False,True
+data\raw\val\07024_Plantae_Tracheophyta_Magnoliopsida_Asterales_Asteraceae_Symphyotrichum_lanceolatum\92a55db7-6aff-4d2e-948d-3263354c7ca8.jpg,336,321,321 336 370 463 340,0.8436048030853271,Symphyotrichum lanceolatum,False,True
+data\raw\val\05467_Fungi_Ascomycota_Sordariomycetes_Hypocreales_Nectriaceae_Nectria_cinnabarina\3fd05d8c-4a12-48a2-95ad-09b3b2cf9369.jpg,259,231,231 75 468 438 259,0.8357303142547607,Nectria cinnabarina,False,True
+data\raw\val\01293_Animalia_Arthropoda_Insecta_Lepidoptera_Geometridae_Plagodis_pulveraria\7c28bbf2-5777-4bd9-8fbd-e8bd1ba7b4a5.jpg,62,58,58 62 54 82 53,0.8328613042831421,Plagodis pulveraria,False,True
+data\raw\val\08410_Plantae_Tracheophyta_Magnoliopsida_Lamiales_Acanthaceae_Thunbergia_alata\a9924b08-0e18-4563-9ccb-e390766621c4.jpg,412,279,279 412 332 337 385,0.8305429220199585,Thunbergia alata,False,True
+data\raw\val\06963_Plantae_Tracheophyta_Magnoliopsida_Asterales_Asteraceae_Rudbeckia_hirta\4ed798a9-d047-40dc-825f-2ac37b3898d8.jpg,332,412,412 332 279 462 386,0.8247060179710388,Rudbeckia hirta,False,True
+data\raw\val\06293_Plantae_Tracheophyta_Liliopsida_Poales_Cyperaceae_Schoenoplectus_acutus\137c4d03-afde-4e17-9354-d2ebaaf2ecc3.jpg,300,301,301 428 404 300 303,0.8049545884132385,Schoenoplectus acutus,False,True
+data\raw\val\00778_Animalia_Arthropoda_Insecta_Hymenoptera_Halictidae_Halictus_rubicundus\72cf5f31-595c-4131-974a-8f4adf868f70.jpg,35,253,253 91 35 23 20,0.8042536973953247,Halictus rubicundus,False,True
+data\raw\val\07324_Plantae_Tracheophyta_Magnoliopsida_Caryophyllales_Amaranthaceae_Celosia_argentea\7aef51c3-7dac-4f90-b290-6a0da99af1b7.jpg,346,423,423 286 287 290 346,0.7977486848831177,Celosia argentea,False,True
+data\raw\val\06051_Plantae_Tracheophyta_Liliopsida_Asparagales_Orchidaceae_Neotinea_tridentata\fc08e222-0ecd-4f6b-8996-7d3681f736e1.jpg,290,388,388 290 378 352 390,0.7974783778190613,Neotinea tridentata,False,True
+data\raw\val\07785_Plantae_Tracheophyta_Magnoliopsida_Ericales_Ericaceae_Rhododendron_periclymenoides\be7a442c-df8b-4687-abd3-05de11d99d50.jpg,368,383,383 453 368 415 473,0.7767808437347412,Rhododendron periclymenoides,False,True
+data\raw\val\05493_Fungi_Basidiomycota_Agaricomycetes_Agaricales_Amanitaceae_Amanita_jacksonii\f4246341-50c6-4b35-b6fd-351d33467b9f.jpg,261,258,258 36 261 420 252,0.7749139666557312,Amanita jacksonii,False,True

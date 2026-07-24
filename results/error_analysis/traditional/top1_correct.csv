@@ -1,0 +1,21 @@
+image_path,true_idx,pred_idx,top5_idx,top1_confidence,true_species,top1_correct,top5_correct
+data\raw\val\05201_Animalia_Echinodermata_Asteroidea_Forcipulatida_Asteriidae_Pisaster_giganteus\da3de2e1-a991-4a4d-b909-6920ece0eba5.jpg,246,246,246 255 259 274 91,0.4872063581205411,Pisaster giganteus,True,True
+data\raw\val\05201_Animalia_Echinodermata_Asteroidea_Forcipulatida_Asteriidae_Pisaster_giganteus\0c7dcc7a-aed3-49df-b195-d8d49fe6ca11.jpg,246,246,246 126 91 125 274,0.3909937829925738,Pisaster giganteus,True,True
+data\raw\val\07202_Plantae_Tracheophyta_Magnoliopsida_Boraginales_Boraginaceae_Pholistoma_membranaceum\86f8d534-f78c-47c6-a3d3-b5f68b0ee00b.jpg,340,340,340 484 328 430 387,0.3805963168743423,Pholistoma membranaceum,True,True
+data\raw\val\05201_Animalia_Echinodermata_Asteroidea_Forcipulatida_Asteriidae_Pisaster_giganteus\51f23135-c383-4908-b88e-eb3acbaccd26.jpg,246,246,246 274 126 248 255,0.3040091828679294,Pisaster giganteus,True,True
+data\raw\val\09985_Plantae_Tracheophyta_Polypodiopsida_Polypodiales_Pteridaceae_Pteris_macilenta\96f3572c-23e2-46b7-ab00-0b5ac0a9b111.jpg,499,499,499 495 497 493 415,0.2811295781280643,Pteris macilenta,True,True
+data\raw\val\00170_Animalia_Arthropoda_Hexanauplia_Scalpelliformes_Pollicipedidae_Pollicipes_polymerus\b5976321-fede-4d40-8c9f-4e06bb1158dc.jpg,9,9,9 262 8 258 264,0.2503764690623604,Pollicipes polymerus,True,True
+data\raw\val\06432_Plantae_Tracheophyta_Liliopsida_Poales_Poaceae_Stipa_pennata\e8128cb6-62e5-4e5b-bae9-3288376ac8d4.jpg,306,306,306 334 380 392 303,0.244401568408374,Stipa pennata,True,True
+data\raw\val\05613_Fungi_Basidiomycota_Agaricomycetes_Boletales_Sclerodermataceae_Scleroderma_citrinum\4f5ac7b9-bff4-45e9-b3ea-fff98d23dc07.jpg,268,268,268 137 405 74 248,0.2424061711970868,Scleroderma citrinum,True,True
+data\raw\val\06892_Plantae_Tracheophyta_Magnoliopsida_Asterales_Asteraceae_Melampodium_leucanthum\f6d36bff-f47c-4071-9ec9-7397a9d7680f.jpg,328,328,328 484 315 340 337,0.2343268047810889,Melampodium leucanthum,True,True
+data\raw\val\00170_Animalia_Arthropoda_Hexanauplia_Scalpelliformes_Pollicipedidae_Pollicipes_polymerus\1839f430-ec29-4ede-be47-eb5835ef3294.jpg,9,9,9 269 264 8 144,0.2242664259418088,Pollicipes polymerus,True,True
+data\raw\val\05613_Fungi_Basidiomycota_Agaricomycetes_Boletales_Sclerodermataceae_Scleroderma_citrinum\8c119389-1b66-47a9-9714-78c2bedc56f8.jpg,268,268,268 137 80 74 247,0.21787422799173,Scleroderma citrinum,True,True
+data\raw\val\06432_Plantae_Tracheophyta_Liliopsida_Poales_Poaceae_Stipa_pennata\e117a6bd-0549-4f48-8b73-bce0bc21b1b4.jpg,306,306,306 392 303 295 305,0.2160660421645196,Stipa pennata,True,True
+data\raw\val\05227_Animalia_Mollusca_Bivalvia_Myida_Pholadidae_Cyrtopleura_costata\cee67207-799f-4059-9dc2-be05aba88a91.jpg,247,247,247 253 251 12 21,0.2131941102042328,Cyrtopleura costata,True,True
+data\raw\val\07202_Plantae_Tracheophyta_Magnoliopsida_Boraginales_Boraginaceae_Pholistoma_membranaceum\b62a6a69-6c68-4215-9912-a8243ccea2f1.jpg,340,340,340 416 484 386 385,0.2119643544394628,Pholistoma membranaceum,True,True
+data\raw\val\05917_Plantae_Tracheophyta_Liliopsida_Asparagales_Asparagaceae_Nolina_parryi\57feeca9-08db-48b5-9625-925d0660a363.jpg,283,283,283 278 221 404 12,0.2012469318152647,Nolina parryi,True,True
+data\raw\val\09907_Plantae_Tracheophyta_Polypodiopsida_Polypodiales_Aspleniaceae_Asplenium_viride\d0c3f690-ff36-45b2-be8d-350b38239aa0.jpg,492,492,492 489 257 275 354,0.200965778396306,Asplenium viride,True,True
+data\raw\val\09192_Plantae_Tracheophyta_Magnoliopsida_Ranunculales_Papaveraceae_Stylophorum_diphyllum\f2e9f17b-59f7-486d-b595-56188ded817b.jpg,462,462,462 383 453 310 311,0.1843445681965581,Stylophorum diphyllum,True,True
+data\raw\val\06892_Plantae_Tracheophyta_Magnoliopsida_Asterales_Asteraceae_Melampodium_leucanthum\35651d0f-85ad-4933-882a-6778f8acb792.jpg,328,328,328 337 315 385 336,0.1776672429064293,Melampodium leucanthum,True,True
+data\raw\val\05435_Fungi_Ascomycota_Lecanoromycetes_Pertusariales_Icmadophilaceae_Dibaeis_baeomyces\eb0fee70-9a44-4e60-a98f-c010ef6fb6fa.jpg,257,257,257 480 409 275 422,0.171244402689983,Dibaeis baeomyces,True,True
+data\raw\val\02843_Animalia_Chordata_Actinopterygii_Perciformes_Labridae_Thalassoma_bifasciatum\daf5d813-6ad0-41b0-ac86-6eff1e1e12e1.jpg,134,134,134 137 244 135 136,0.1623580406073824,Thalassoma bifasciatum,True,True

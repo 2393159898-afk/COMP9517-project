@@ -1,0 +1,21 @@
+image_path,true_idx,pred_idx,top5_idx,top1_confidence,true_species,top1_correct,top5_correct
+data\raw\val\07042_Plantae_Tracheophyta_Magnoliopsida_Asterales_Asteraceae_Tetraneuris_scaposa\44b438ed-4839-49f8-99f0-d021d6291b50.jpg,337,328,328 337 315 329 370,0.1857905712824304,Tetraneuris scaposa,False,True
+data\raw\val\06409_Plantae_Tracheophyta_Liliopsida_Poales_Poaceae_Paspalum_urvillei\0b3cbe84-ea1e-436e-b121-91b374872ec7.jpg,305,306,306 305 446 293 213,0.1801455414547699,Paspalum urvillei,False,True
+data\raw\val\07609_Plantae_Tracheophyta_Magnoliopsida_Cornales_Hydrangeaceae_Hydrangea_quercifolia\eef78ed4-f19a-411f-97a4-63c56e80fe8e.jpg,357,462,462 357 482 345 311,0.164459216706336,Hydrangea quercifolia,False,True
+data\raw\val\09468_Plantae_Tracheophyta_Magnoliopsida_Rosales_Rosaceae_Rubus_laciniatus\bcd64498-6b44-4dae-b814-b2732846e912.jpg,473,415,415 473 499 411 410,0.1551212320464449,Rubus laciniatus,False,True
+data\raw\val\09636_Plantae_Tracheophyta_Magnoliopsida_Saxifragales_Grossulariaceae_Ribes_rubrum\e8469c79-bc9b-4d3a-9efa-d9bec5fa8e71.jpg,481,462,462 311 312 481 383,0.1484257549021606,Ribes rubrum,False,True
+data\raw\val\08386_Plantae_Tracheophyta_Magnoliopsida_Geraniales_Geraniaceae_Geranium_sibiricum\3f79829f-c5d7-45a4-96d7-59c086d6048f.jpg,411,462,462 411 345 310 37,0.1435254555544242,Geranium sibiricum,False,True
+data\raw\val\09139_Plantae_Tracheophyta_Magnoliopsida_Proteales_Proteaceae_Protea_repens\9821a387-82e7-41ed-9bc4-7d802f338f2e.jpg,459,498,498 459 303 494 375,0.1426066281831695,Protea repens,False,True
+data\raw\val\09907_Plantae_Tracheophyta_Polypodiopsida_Polypodiales_Aspleniaceae_Asplenium_viride\191baff8-0c06-47e6-98c9-e8473f81e98b.jpg,492,257,257 492 480 145 422,0.1361419672160358,Asplenium viride,False,True
+data\raw\val\05567_Fungi_Basidiomycota_Agaricomycetes_Agaricales_Psathyrellaceae_Coprinopsis_variegata\51399753-2404-4b53-9892-f260e9cb5822.jpg,262,268,268 262 272 260 223,0.1300845658412114,Coprinopsis variegata,False,True
+data\raw\val\09192_Plantae_Tracheophyta_Magnoliopsida_Ranunculales_Papaveraceae_Stylophorum_diphyllum\f5209b20-78a8-4933-a7af-276f969ba587.jpg,462,411,411 462 317 415 311,0.12704282961816,Stylophorum diphyllum,False,True
+data\raw\val\07609_Plantae_Tracheophyta_Magnoliopsida_Cornales_Hydrangeaceae_Hydrangea_quercifolia\e92fc35b-2a3a-4b4c-871b-117568a435f8.jpg,357,462,462 357 311 37 472,0.1231562754973546,Hydrangea quercifolia,False,True
+data\raw\val\06293_Plantae_Tracheophyta_Liliopsida_Poales_Cyperaceae_Schoenoplectus_acutus\099819fb-698e-40b8-99ec-5c719a6aa865.jpg,300,355,355 300 151 180 188,0.1209808091383054,Schoenoplectus acutus,False,True
+data\raw\val\04404_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Platalea_flavipes\571d2396-0763-4cc5-9c5d-e3090fbe84c8.jpg,202,301,301 300 306 200 202,0.1138956400914293,Platalea flavipes,False,True
+data\raw\val\04711_Animalia_Chordata_Mammalia_Carnivora_Phocidae_Halichoerus_grypus\e1188ef7-7ea9-40a2-a001-8fa975a41a97.jpg,216,154,154 155 216 174 202,0.1013944579490383,Halichoerus grypus,False,True
+data\raw\val\09985_Plantae_Tracheophyta_Polypodiopsida_Polypodiales_Pteridaceae_Pteris_macilenta\e7f91b13-03c4-492b-a4fe-6edcc4735869.jpg,499,495,495 499 480 415 333,0.0985110319924961,Pteris macilenta,False,True
+data\raw\val\05396_Fungi_Ascomycota_Lecanoromycetes_Candelariales_Candelariaceae_Candelaria_concolor\290d6d26-d7b0-405e-b140-53a12d84ae55.jpg,256,257,257 256 344 480 31,0.0966063606031093,Candelaria concolor,False,True
+data\raw\val\04766_Animalia_Chordata_Mammalia_Monotremata_Ornithorhynchidae_Ornithorhynchus_anatinus\7a324fb9-157c-4f2f-b558-88bf41c7711e.jpg,219,253,253 219 245 202 244,0.0941385064916742,Ornithorhynchus anatinus,False,True
+data\raw\val\04075_Animalia_Chordata_Aves_Passeriformes_Parulidae_Setophaga_graciae\7c9acfcc-90fe-4cb4-a945-c31a1098e2ae.jpg,188,278,278 188 300 404 200,0.0927977293897681,Setophaga graciae,False,True
+data\raw\val\02915_Animalia_Chordata_Actinopterygii_Syngnathiformes_Aulostomidae_Aulostomus_chinensis\283f080b-6682-4004-b847-84340ddb37f3.jpg,136,134,134 136 255 137 246,0.0914637106233838,Aulostomus chinensis,False,True
+data\raw\val\05279_Animalia_Mollusca_Gastropoda_Neogastropoda_Buccinidae_Cominella_adspersa\6d116447-2a60-44b0-8850-85db449b1ef3.jpg,248,247,247 248 126 229 232,0.085949406929125,Cominella adspersa,False,True

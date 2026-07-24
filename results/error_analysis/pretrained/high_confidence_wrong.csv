@@ -1,0 +1,21 @@
+image_path,true_idx,pred_idx,top5_idx,top1_confidence,true_species,top1_correct,top5_correct
+data\raw\val\02385_Animalia_Arthropoda_Insecta_Odonata_Coenagrionidae_Ischnura_denticollis\2ba9b2dc-3ce0-4423-8701-96a68aeee8f1.jpg,105,104,104 105 110 109 177,0.9722919464111328,Ischnura denticollis,False,True
+data\raw\val\03621_Animalia_Chordata_Aves_Galliformes_Odontophoridae_Callipepla_californica\49bc9d3a-9125-4e20-a620-83640dd5d087.jpg,163,161,161 163 189 177 197,0.971444606781006,Callipepla californica,False,True
+data\raw\val\02712_Animalia_Arthropoda_Malacostraca_Decapoda_Epialtidae_Pugettia_producta\8d02525b-0442-4bdd-975a-1bcc0c42cc65.jpg,124,123,123 124 245 249 126,0.9675905108451844,Pugettia producta,False,True
+data\raw\val\01536_Animalia_Arthropoda_Insecta_Lepidoptera_Lycaenidae_Strymon_melinus\5600e3fe-08c2-47c6-a3b1-74f1b9d3e373.jpg,71,336,336 321 71 66 421,0.9635594487190248,Strymon melinus,False,True
+data\raw\val\09985_Plantae_Tracheophyta_Polypodiopsida_Polypodiales_Pteridaceae_Pteris_macilenta\69b3671a-9439-4906-af38-b3b064bb4dbe.jpg,499,497,497 499 496 495 493,0.9483867883682252,Pteris macilenta,False,True
+data\raw\val\08641_Plantae_Tracheophyta_Magnoliopsida_Lamiales_Plantaginaceae_Cymbalaria_muralis\cb0a2805-dd35-4539-ac16-a54c027dc8e6.jpg,424,371,371 444 430 424 406,0.9447692632675172,Cymbalaria muralis,False,True
+data\raw\val\03026_Animalia_Chordata_Amphibia_Anura_Ranidae_Lithobates_blairi\cbb151fc-bbef-4432-a4d6-ee80e448de2e.jpg,142,143,143 142 138 3 144,0.9413390159606934,Lithobates blairi,False,True
+data\raw\val\04955_Animalia_Chordata_Reptilia_Squamata_Colubridae_Regina_grahamii\004163e4-6f09-4b6a-807c-7fe68c305b1d.jpg,235,229,229 235 200 145 230,0.93905508518219,Regina grahamii,False,True
+data\raw\val\06447_Plantae_Tracheophyta_Liliopsida_Zingiberales_Cannaceae_Canna_indica\c7e413ec-57b9-40aa-a7d6-7ef1e4713b52.jpg,307,420,420 307 363 425 451,0.9282509088516236,Canna indica,False,True
+data\raw\val\07305_Plantae_Tracheophyta_Magnoliopsida_Caryophyllales_Aizoaceae_Mesembryanthemum_crystallinum\d78c456f-06fc-4b8e-aa20-81249427de22.jpg,344,403,403 399 344 362 401,0.9220882058143616,Mesembryanthemum crystallinum,False,True
+data\raw\val\00200_Animalia_Arthropoda_Insecta_Coleoptera_Carabidae_Cicindela_campestris\e4405228-fc65-4642-8c96-7490b76cc29b.jpg,10,11,11 10 13 14 21,0.918814778327942,Cicindela campestris,False,True
+data\raw\val\07480_Plantae_Tracheophyta_Magnoliopsida_Caryophyllales_Droseraceae_Drosera_spatulata\c1abeb1f-09b9-4766-ac44-410783893fef.jpg,354,353,353 354 480 299 273,0.9125027060508728,Drosera spatulata,False,True
+data\raw\val\00652_Animalia_Arthropoda_Insecta_Hemiptera_Reduviidae_Pselliopus_barberi\73379341-4fc3-41bd-8390-cf6605dc28e6.jpg,31,3,3 31 5 108 104,0.9097841382026672,Pselliopus barberi,False,True
+data\raw\val\01566_Animalia_Arthropoda_Insecta_Lepidoptera_Noctuidae_Agrotis_munda\68337033-9e7e-4e7d-8020-fe6d5062868b.jpg,72,77,77 72 45 25 52,0.9062227606773376,Agrotis munda,False,True
+data\raw\val\04711_Animalia_Chordata_Mammalia_Carnivora_Phocidae_Halichoerus_grypus\540d403b-d21d-40c8-bec0-a06a57cb5020.jpg,216,217,217 216 158 190 161,0.8985015153884888,Halichoerus grypus,False,True
+data\raw\val\06366_Plantae_Tracheophyta_Liliopsida_Poales_Poaceae_Digitaria_sanguinalis\7e511437-2acd-4605-abd6-52476c8a2ef6.jpg,302,296,296 302 304 294 310,0.8947791457176208,Digitaria sanguinalis,False,True
+data\raw\val\02581_Animalia_Arthropoda_Insecta_Odonata_Libellulidae_Trithemis_annulata\51b5ad46-76a5-450b-95f9-d20eac551ed2.jpg,117,116,116 117 115 118 108,0.8944634199142456,Trithemis annulata,False,True
+data\raw\val\07831_Plantae_Tracheophyta_Magnoliopsida_Ericales_Polemoniaceae_Phlox_hoodii\efb11f9a-941c-4d18-9b16-d8fd49922903.jpg,372,370,370 372 315 328 321,0.8917549848556519,Phlox hoodii,False,True
+data\raw\val\06239_Plantae_Tracheophyta_Liliopsida_Poales_Cyperaceae_Carex_eburnea\269afd68-c6fe-402d-9e91-baa2dad5cd12.jpg,295,296,296 295 491 304 302,0.8891660571098328,Carex eburnea,False,True
+data\raw\val\04231_Animalia_Chordata_Aves_Passeriformes_Thraupidae_Sicalis_luteola\e39569e4-c40e-4801-8f4f-73b50506bed4.jpg,195,181,181 195 180 188 169,0.8762040734291077,Sicalis luteola,False,True

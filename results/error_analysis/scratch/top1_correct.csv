@@ -1,0 +1,21 @@
+image_path,true_idx,pred_idx,top5_idx,top1_confidence,true_species,top1_correct,top5_correct
+data\raw\val\01471_Animalia_Arthropoda_Insecta_Lepidoptera_Lycaenidae_Eooxylides_tharis\51d50573-9890-4ff3-90be-7fc67dd5f9dd.jpg,65,65,65 16 66 82 88,0.9998685121536256,Eooxylides tharis,True,True
+data\raw\val\08594_Plantae_Tracheophyta_Magnoliopsida_Lamiales_Orobanchaceae_Hyobanche_sanguinea\5188ac48-c95f-4846-a7db-b88fac738e31.jpg,422,422,422 361 350 476 461,0.9997557997703552,Hyobanche sanguinea,True,True
+data\raw\val\09186_Plantae_Tracheophyta_Magnoliopsida_Ranunculales_Papaveraceae_Papaver_rhoeas\8df90e42-af2b-4202-80f8-90b9894cf55f.jpg,461,461,461 422 258 363 252,0.9991069436073304,Papaver rhoeas,True,True
+data\raw\val\05696_Fungi_Basidiomycota_Agaricomycetes_Polyporales_Sparassidaceae_Sparassis_spathulata\70743ff9-6b2a-4679-8afe-5ca2f86f0d4e.jpg,272,272,272 268 262 271 265,0.998877227306366,Sparassis spathulata,True,True
+data\raw\val\05493_Fungi_Basidiomycota_Agaricomycetes_Agaricales_Amanitaceae_Amanita_jacksonii\8b333831-1fb4-481c-a55c-3836d86df26c.jpg,261,261,261 252 258 266 434,0.9988368153572084,Amanita jacksonii,True,True
+data\raw\val\09186_Plantae_Tracheophyta_Magnoliopsida_Ranunculales_Papaveraceae_Papaver_rhoeas\304d841f-6422-4b9d-81ee-2ef663719a3c.jpg,461,461,461 422 258 252 363,0.9979257583618164,Papaver rhoeas,True,True
+data\raw\val\00863_Animalia_Arthropoda_Insecta_Lepidoptera_Crambidae_Anania_funebris\453d54cd-6fc0-4566-b243-a8d299e904ef.jpg,43,43,43 44 88 85 34,0.9976704716682434,Anania funebris,True,True
+data\raw\val\01278_Animalia_Arthropoda_Insecta_Lepidoptera_Geometridae_Opisthograptis_luteolata\4ff75e89-1a7b-4427-99e2-6935c75f911a.jpg,61,61,61 448 292 95 454,0.99712735414505,Opisthograptis luteolata,True,True
+data\raw\val\01944_Animalia_Arthropoda_Insecta_Lepidoptera_Nymphalidae_Parantica_aglea\d552d56c-f42f-4318-a880-242800ec07c1.jpg,88,88,88 69 91 111 70,0.997104823589325,Parantica aglea,True,True
+data\raw\val\09444_Plantae_Tracheophyta_Magnoliopsida_Rosales_Rosaceae_Rosa_bracteata\7f9e92a6-83d9-4b12-9e56-ff86ccd3c999.jpg,471,471,471 485 328 358 330,0.9968982934951782,Rosa bracteata,True,True
+data\raw\val\05696_Fungi_Basidiomycota_Agaricomycetes_Polyporales_Sparassidaceae_Sparassis_spathulata\95e612fd-bd39-4b46-9d5c-a7343a9cf968.jpg,272,272,272 262 57 59 60,0.9968494772911072,Sparassis spathulata,True,True
+data\raw\val\05696_Fungi_Basidiomycota_Agaricomycetes_Polyporales_Sparassidaceae_Sparassis_spathulata\a0e09314-c3fd-457d-a67f-5ba90d7148ea.jpg,272,272,272 262 270 357 248,0.9967535138130188,Sparassis spathulata,True,True
+data\raw\val\00863_Animalia_Arthropoda_Insecta_Lepidoptera_Crambidae_Anania_funebris\ce0a3250-0e2a-4c6c-bb6d-e1347b667206.jpg,43,43,43 44 85 93 94,0.996350884437561,Anania funebris,True,True
+data\raw\val\01471_Animalia_Arthropoda_Insecta_Lepidoptera_Lycaenidae_Eooxylides_tharis\47f12701-f32a-4ce6-ab3e-5dc8fed63195.jpg,65,65,65 66 196 16 412,0.9962839484214784,Eooxylides tharis,True,True
+data\raw\val\00863_Animalia_Arthropoda_Insecta_Lepidoptera_Crambidae_Anania_funebris\ab363048-befa-4b27-a704-4a275d4cf082.jpg,43,43,43 85 44 93 34,0.996256709098816,Anania funebris,True,True
+data\raw\val\00623_Animalia_Arthropoda_Insecta_Hemiptera_Pentatomidae_Euthyrhynchus_floridanus\6b5148ea-bdc8-49fa-a5d9-6e8d9b4c3ac8.jpg,30,30,30 26 94 16 88,0.9960466027259828,Euthyrhynchus floridanus,True,True
+data\raw\val\04770_Animalia_Chordata_Mammalia_Perissodactyla_Equidae_Equus_quagga\a20331f2-7127-43b7-b167-1f0e4dcdb2e4.jpg,221,221,221 156 164 486 284,0.9957855343818665,Equus quagga,True,True
+data\raw\val\01910_Animalia_Arthropoda_Insecta_Lepidoptera_Nymphalidae_Limenitis_lorquini\f6d39b70-fa05-460f-a735-ae29f8fade16.jpg,85,85,85 48 87 19 43,0.9957525730133056,Limenitis lorquini,True,True
+data\raw\val\06773_Plantae_Tracheophyta_Magnoliopsida_Asterales_Asteraceae_Erigeron_foliosus\df012c83-20c7-4041-bd5a-45a1478dec44.jpg,323,323,323 426 330 465 414,0.9956597685813904,Erigeron foliosus,True,True
+data\raw\val\08717_Plantae_Tracheophyta_Magnoliopsida_Lamiales_Scrophulariaceae_Verbascum_nigrum\2c174a65-b3b8-4c9c-ba44-1ff67c0d79de.jpg,432,432,432 298 326 428 299,0.9949535727500916,Verbascum nigrum,True,True
