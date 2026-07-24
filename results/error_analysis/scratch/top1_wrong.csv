@@ -1,0 +1,21 @@
+image_path,true_idx,pred_idx,top5_idx,top1_confidence,true_species,top1_correct,top5_correct
+data\raw\val\02114_Animalia_Arthropoda_Insecta_Lepidoptera_Pyralidae_Aglossa_pinguinalis\8ff53dbe-3ba5-47b0-8282-ae17f3530dd0.jpg,98,422,422 461 51 247 351,0.9299296736717224,Aglossa pinguinalis,False,False
+data\raw\val\02375_Animalia_Arthropoda_Insecta_Odonata_Coenagrionidae_Enallagma_geminatum\c7483ed7-d1f2-4ade-a844-b936bc05aa49.jpg,104,25,25 73 0 488 234,0.9275846481323242,Enallagma geminatum,False,False
+data\raw\val\07831_Plantae_Tracheophyta_Magnoliopsida_Ericales_Polemoniaceae_Phlox_hoodii\7ce21c16-ef6d-434c-99e3-05909a0f6a2e.jpg,372,370,370 328 372 336 329,0.9256449341773988,Phlox hoodii,False,True
+data\raw\val\08936_Plantae_Tracheophyta_Magnoliopsida_Malvales_Malvaceae_Callirhoe_pedata\521159f0-6f08-456a-8236-42f370e3d343.jpg,446,260,260 485 446 265 471,0.9190552830696106,Callirhoe pedata,False,True
+data\raw\val\05467_Fungi_Ascomycota_Sordariomycetes_Hypocreales_Nectriaceae_Nectria_cinnabarina\677ff941-eb15-458c-a1e5-364b0977fd80.jpg,259,12,12 122 29 209 206,0.9027692675590516,Nectria cinnabarina,False,False
+data\raw\val\02704_Animalia_Arthropoda_Malacostraca_Decapoda_Cancridae_Cancer_borealis\ee3a99bf-2c77-4b2a-a98e-e0efff4d9ced.jpg,123,245,245 123 276 124 252,0.8967090249061584,Cancer borealis,False,True
+data\raw\val\01536_Animalia_Arthropoda_Insecta_Lepidoptera_Lycaenidae_Strymon_melinus\2235e6ad-b804-4b6d-b681-8d21d8c396a0.jpg,71,84,84 66 71 111 85,0.8965291380882263,Strymon melinus,False,True
+data\raw\val\01536_Animalia_Arthropoda_Insecta_Lepidoptera_Lycaenidae_Strymon_melinus\5600e3fe-08c2-47c6-a3b1-74f1b9d3e373.jpg,71,336,336 71 321 329 370,0.8876050710678101,Strymon melinus,False,True
+data\raw\val\03206_Animalia_Chordata_Aves_Anseriformes_Anatidae_Anas_zonorhyncha\432555c2-807b-4daf-a03e-6c201804cd6b.jpg,151,150,150 151 216 159 154,0.8829996585845947,Anas zonorhyncha,False,True
+data\raw\val\00830_Animalia_Arthropoda_Insecta_Hymenoptera_Vespidae_Polistes_dominula\16140327-f411-49a5-adeb-ea72718c58f4.jpg,38,119,119 75 116 39 45,0.8629876971244812,Polistes dominula,False,False
+data\raw\val\03995_Animalia_Chordata_Aves_Passeriformes_Muscicapidae_Phoenicurus_phoenicurus\ef316132-3021-4758-8adf-84f80a5d022a.jpg,184,474,474 461 307 36 481,0.8609431982040405,Phoenicurus phoenicurus,False,False
+data\raw\val\07616_Plantae_Tracheophyta_Magnoliopsida_Cornales_Loasaceae_Petalonyx_thurberi\ca2f0812-44b1-4fa3-9b09-256b3db90ae5.jpg,359,463,463 380 359 370 331,0.8565778136253357,Petalonyx thurberi,False,True
+data\raw\val\04766_Animalia_Chordata_Mammalia_Monotremata_Ornithorhynchidae_Ornithorhynchus_anatinus\7ba22ef1-b567-4d2c-925a-caa07ac7c0a3.jpg,219,104,104 219 128 110 177,0.8561819791793823,Ornithorhynchus anatinus,False,True
+data\raw\val\06773_Plantae_Tracheophyta_Magnoliopsida_Asterales_Asteraceae_Erigeron_foliosus\aa420105-0e42-4c7e-a57c-5074f37f35d9.jpg,323,487,487 421 418 449 414,0.8447573781013489,Erigeron foliosus,False,False
+data\raw\val\01958_Animalia_Arthropoda_Insecta_Lepidoptera_Nymphalidae_Polygonia_faunus\c9652c0f-9a87-41c6-9abc-8d2f33e903ea.jpg,90,89,89 92 90 68 84,0.8436739444732666,Polygonia faunus,False,True
+data\raw\val\07024_Plantae_Tracheophyta_Magnoliopsida_Asterales_Asteraceae_Symphyotrichum_lanceolatum\92a55db7-6aff-4d2e-948d-3263354c7ca8.jpg,336,321,321 336 370 463 340,0.8436048030853271,Symphyotrichum lanceolatum,False,True
+data\raw\val\06773_Plantae_Tracheophyta_Magnoliopsida_Asterales_Asteraceae_Erigeron_foliosus\f793441b-e195-48d3-8466-bbedeab588c0.jpg,323,444,444 410 97 33 426,0.8421884775161743,Erigeron foliosus,False,False
+data\raw\val\01293_Animalia_Arthropoda_Insecta_Lepidoptera_Geometridae_Plagodis_pulveraria\c4428168-46b7-4ad4-9a55-d6b888cd7ffe.jpg,62,60,60 41 271 272 262,0.8412359356880188,Plagodis pulveraria,False,False
+data\raw\val\01516_Animalia_Arthropoda_Insecta_Lepidoptera_Lycaenidae_Plebejus_samuelis\b03d47c6-21b5-4a01-a810-ce6504de7004.jpg,69,357,357 321 358 60 373,0.8383223414421082,Plebejus samuelis,False,False
+data\raw\val\05467_Fungi_Ascomycota_Sordariomycetes_Hypocreales_Nectriaceae_Nectria_cinnabarina\3fd05d8c-4a12-48a2-95ad-09b3b2cf9369.jpg,259,231,231 75 468 438 259,0.8357303142547607,Nectria cinnabarina,False,True

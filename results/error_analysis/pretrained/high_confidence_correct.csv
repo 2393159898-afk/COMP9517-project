@@ -1,0 +1,21 @@
+image_path,true_idx,pred_idx,top5_idx,top1_confidence,true_species,top1_correct,top5_correct
+data\raw\val\08717_Plantae_Tracheophyta_Magnoliopsida_Lamiales_Scrophulariaceae_Verbascum_nigrum\2c174a65-b3b8-4c9c-ba44-1ff67c0d79de.jpg,432,432,432 419 298 322 334,0.9999959468841552,Verbascum nigrum,True,True
+data\raw\val\05435_Fungi_Ascomycota_Lecanoromycetes_Pertusariales_Icmadophilaceae_Dibaeis_baeomyces\c9fa4e0c-5381-4ab9-8924-9bbf8253ec80.jpg,257,257,257 449 344 259 258,0.999954104423523,Dibaeis baeomyces,True,True
+data\raw\val\07367_Plantae_Tracheophyta_Magnoliopsida_Caryophyllales_Cactaceae_Echinocereus_pentalophus\3469f76e-88d5-4b0d-b2b2-d62f5571b8f1.jpg,349,349,349 350 335 303 306,0.9999339580535888,Echinocereus pentalophus,True,True
+data\raw\val\07851_Plantae_Tracheophyta_Magnoliopsida_Ericales_Primulaceae_Lysimachia_clethroides\3eb45820-b0dd-4928-8021-939c1c4c2dd2.jpg,373,373,373 408 419 85 331,0.9999207258224488,Lysimachia clethroides,True,True
+data\raw\val\00907_Animalia_Arthropoda_Insecta_Lepidoptera_Crambidae_Microtheoris_vibicalis\688e94a2-ab3b-4d5c-9e29-a5309afe89bb.jpg,46,46,46 45 75 42 27,0.9998563528060912,Microtheoris vibicalis,True,True
+data\raw\val\07305_Plantae_Tracheophyta_Magnoliopsida_Caryophyllales_Aizoaceae_Mesembryanthemum_crystallinum\aa7301e5-996e-4310-81df-8344875a6cb1.jpg,344,344,344 351 275 345 489,0.9998531341552734,Mesembryanthemum crystallinum,True,True
+data\raw\val\05435_Fungi_Ascomycota_Lecanoromycetes_Pertusariales_Icmadophilaceae_Dibaeis_baeomyces\85bb5786-4aef-4569-92fc-5b991bcde1df.jpg,257,257,257 258 315 259 366,0.9998182654380798,Dibaeis baeomyces,True,True
+data\raw\val\07851_Plantae_Tracheophyta_Magnoliopsida_Ericales_Primulaceae_Lysimachia_clethroides\81189c32-782b-403c-a5d9-e2d6e1ce0b57.jpg,373,373,373 419 331 408 392,0.9997552037239076,Lysimachia clethroides,True,True
+data\raw\val\08419_Plantae_Tracheophyta_Magnoliopsida_Lamiales_Bignoniaceae_Tabebuia_rosea\e525f1fc-b92d-46ca-8843-d372e54d5a09.jpg,413,413,413 396 476 397 368,0.9996941089630128,Tabebuia rosea,True,True
+data\raw\val\05435_Fungi_Ascomycota_Lecanoromycetes_Pertusariales_Icmadophilaceae_Dibaeis_baeomyces\eb0fee70-9a44-4e60-a98f-c010ef6fb6fa.jpg,257,257,257 449 259 264 315,0.9996546506881714,Dibaeis baeomyces,True,True
+data\raw\val\05672_Fungi_Basidiomycota_Agaricomycetes_Polyporales_Phanerochaetaceae_Climacodon_septentrionalis\7a826dc1-06be-42cd-828b-a380f62b3a08.jpg,270,270,270 272 488 264 262,0.9995806813240052,Climacodon septentrionalis,True,True
+data\raw\val\08475_Plantae_Tracheophyta_Magnoliopsida_Lamiales_Lamiaceae_Origanum_vulgare\5ec565f6-3e4f-4939-bb61-5b23d6b9685b.jpg,416,416,416 419 408 361 309,0.999392032623291,Origanum vulgare,True,True
+data\raw\val\01152_Animalia_Arthropoda_Insecta_Lepidoptera_Geometridae_Anticlea_vasiliata\3e6dc85e-10d7-4d39-9863-30eebdf3a6b8.jpg,52,52,52 59 240 269 237,0.9993902444839478,Anticlea vasiliata,True,True
+data\raw\val\09288_Plantae_Tracheophyta_Magnoliopsida_Rosales_Cannabaceae_Cannabis_sativa\f2640255-e18e-4521-916b-079c2f5b8271.jpg,466,466,466 309 326 310 302,0.9993411898612976,Cannabis sativa,True,True
+data\raw\val\08344_Plantae_Tracheophyta_Magnoliopsida_Gentianales_Rubiaceae_Galium_triflorum\d67d6170-1304-4b73-a4c7-46cd0c78c6d7.jpg,407,407,407 343 406 285 341,0.9993150234222412,Galium triflorum,True,True
+data\raw\val\09085_Plantae_Tracheophyta_Magnoliopsida_Nymphaeales_Nymphaeaceae_Nymphaea_nouchali\5ae98eba-380d-4bd9-a6d4-cd053494a7b4.jpg,456,456,456 86 464 104 95,0.999304175376892,Nymphaea nouchali,True,True
+data\raw\val\06432_Plantae_Tracheophyta_Liliopsida_Poales_Poaceae_Stipa_pennata\7d427319-5cf1-4ccc-a57d-fbe6dc2429e7.jpg,306,306,306 303 305 318 293,0.9992693066596984,Stipa pennata,True,True
+data\raw\val\06229_Plantae_Tracheophyta_Liliopsida_Poales_Bromeliaceae_Tillandsia_utriculata\aea95e60-ed23-46db-bcef-3110017b1b47.jpg,293,293,293 326 284 306 498,0.9992006421089172,Tillandsia utriculata,True,True
+data\raw\val\00170_Animalia_Arthropoda_Hexanauplia_Scalpelliformes_Pollicipedidae_Pollicipes_polymerus\1839f430-ec29-4ede-be47-eb5835ef3294.jpg,9,9,9 223 124 262 123,0.9991891980171204,Pollicipes polymerus,True,True
+data\raw\val\09139_Plantae_Tracheophyta_Magnoliopsida_Proteales_Proteaceae_Protea_repens\6a349686-2638-472c-9238-760c5c3c196e.jpg,459,459,459 458 375 452 338,0.999171495437622,Protea repens,True,True

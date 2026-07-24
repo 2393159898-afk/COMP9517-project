@@ -1,0 +1,21 @@
+image_path,true_idx,pred_idx,top5_idx,top1_confidence,true_species,top1_correct,top5_correct
+data\raw\val\05684_Fungi_Basidiomycota_Agaricomycetes_Polyporales_Polyporaceae_Lentinus_arcularius\98cb7731-21e7-4697-a87a-f20c1344ffb1.jpg,271,271,271 144 91 346 140,0.0064098124993899,Lentinus arcularius,True,True
+data\raw\val\03502_Animalia_Chordata_Aves_Ciconiiformes_Ciconiidae_Ciconia_ciconia\463a06e4-2cea-4196-bc4e-710ae49a22ee.jpg,160,160,160 28 211 486 474,0.0094494146113134,Ciconia ciconia,True,True
+data\raw\val\08386_Plantae_Tracheophyta_Magnoliopsida_Geraniales_Geraniaceae_Geranium_sibiricum\7ef25b8f-06bf-4614-9743-5a1048564fe7.jpg,411,411,411 183 206 34 23,0.0104936341849747,Geranium sibiricum,True,True
+data\raw\val\00832_Animalia_Arthropoda_Insecta_Hymenoptera_Vespidae_Polistes_exclamans\ef07ada2-9120-4795-95e1-8dddb8187519.jpg,39,39,39 437 40 291 234,0.0106546933204867,Polistes exclamans,True,True
+data\raw\val\00332_Animalia_Arthropoda_Insecta_Coleoptera_Coccinellidae_Psyllobora_vigintiduopunctata\8ab5d7f9-a879-43b6-978b-78d224dfaa1f.jpg,20,20,20 446 304 70 89,0.0109810904795573,Psyllobora vigintiduopunctata,True,True
+data\raw\val\02941_Animalia_Chordata_Amphibia_Anura_Bombinatoridae_Bombina_variegata\340fb7d9-ac68-44c5-ad4f-b25c2d2081af.jpg,138,138,138 132 52 5 250,0.0110306531500656,Bombina variegata,True,True
+data\raw\val\04241_Animalia_Chordata_Aves_Passeriformes_Thraupidae_Tangara_arthus\ba978cd3-4a08-47c0-8406-887d2d48d984.jpg,196,196,196 280 141 71 32,0.0111141955529683,Tangara arthus,True,True
+data\raw\val\03971_Animalia_Chordata_Aves_Passeriformes_Motacillidae_Motacilla_citreola\f3a7918f-c2e6-470d-9c6e-0cf6af4db633.jpg,180,180,180 150 188 216 278,0.0112527301499899,Motacilla citreola,True,True
+data\raw\val\02340_Animalia_Arthropoda_Insecta_Odonata_Coenagrionidae_Agriocnemis_femina\f0bb629d-a18f-420b-8cfa-ae8764adac4a.jpg,103,103,103 128 65 4 122,0.0114908347509009,Agriocnemis femina,True,True
+data\raw\val\04915_Animalia_Chordata_Reptilia_Squamata_Colubridae_Hypsiglena_jani\b52e98d0-98fb-49e7-889d-22cb40ee9d74.jpg,230,230,230 15 174 117 79,0.0118265447325669,Hypsiglena jani,True,True
+data\raw\val\03026_Animalia_Chordata_Amphibia_Anura_Ranidae_Lithobates_blairi\e13e4b37-89dc-4c66-bc7e-a3ae3af3938d.jpg,142,142,142 72 73 78 133,0.0119183872706892,Lithobates blairi,True,True
+data\raw\val\00863_Animalia_Arthropoda_Insecta_Lepidoptera_Crambidae_Anania_funebris\453d54cd-6fc0-4566-b243-a8d299e904ef.jpg,43,43,43 15 106 196 80,0.0119748180792601,Anania funebris,True,True
+data\raw\val\00083_Animalia_Arthropoda_Arachnida_Araneae_Salticidae_Lyssomanes_viridis\b1b2d776-d061-46c1-886c-2537df234bcd.jpg,4,4,4 57 20 245 18,0.0124819968176747,Lyssomanes viridis,True,True
+data\raw\val\04939_Animalia_Chordata_Reptilia_Squamata_Colubridae_Nerodia_floridana\b2ff88fd-3b59-4fac-ac67-0e57d41cda0c.jpg,232,232,232 215 160 241 166,0.0124920386957265,Nerodia floridana,True,True
+data\raw\val\06117_Plantae_Tracheophyta_Liliopsida_Commelinales_Haemodoraceae_Wachendorfia_paniculata\5b2d6409-0697-4c27-8db9-5e3170176319.jpg,292,292,292 90 443 408 236,0.0125799784929103,Wachendorfia paniculata,True,True
+data\raw\val\01669_Animalia_Arthropoda_Insecta_Lepidoptera_Noctuidae_Ochropleura_implecta\ed21a00b-91ed-45b7-b2e5-d4b822ba83fe.jpg,79,79,79 53 74 20 102,0.0126177889952497,Ochropleura implecta,True,True
+data\raw\val\01566_Animalia_Arthropoda_Insecta_Lepidoptera_Noctuidae_Agrotis_munda\b2ffd5b3-624d-4adc-8004-c6e7ec248101.jpg,72,72,72 78 130 225 236,0.0126972541060943,Agrotis munda,True,True
+data\raw\val\02114_Animalia_Arthropoda_Insecta_Lepidoptera_Pyralidae_Aglossa_pinguinalis\2a55c8c7-967d-44b8-bc2c-18acfc5204ab.jpg,98,98,98 19 277 31 323,0.0127942859512253,Aglossa pinguinalis,True,True
+data\raw\val\09186_Plantae_Tracheophyta_Magnoliopsida_Ranunculales_Papaveraceae_Papaver_rhoeas\53fa3594-2894-4a33-80ac-b61b53ed0561.jpg,461,461,461 90 387 384 432,0.012848598964207,Papaver rhoeas,True,True
+data\raw\val\01979_Animalia_Arthropoda_Insecta_Lepidoptera_Nymphalidae_Texola_elada\35505dfc-ff1e-416b-ada4-f1f49df51b4e.jpg,91,91,91 38 433 222 140,0.0130102404385979,Texola elada,True,True

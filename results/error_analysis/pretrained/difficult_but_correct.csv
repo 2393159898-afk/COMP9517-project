@@ -1,0 +1,21 @@
+image_path,true_idx,pred_idx,top5_idx,top1_confidence,true_species,top1_correct,top5_correct
+data\raw\val\00304_Animalia_Arthropoda_Insecta_Coleoptera_Coccinellidae_Anatis_ocellata\75ffcc2d-e93c-4173-9a43-0636b1ed0770.jpg,19,19,19 48 85 43 92,0.0518754348158836,Anatis ocellata,True,True
+data\raw\val\06714_Plantae_Tracheophyta_Magnoliopsida_Asterales_Asteraceae_Cirsium_pitcheri\0185c461-c35d-4055-9e59-b0ca87a14052.jpg,319,319,319 63 97 300 277,0.0598951838910579,Cirsium pitcheri,True,True
+data\raw\val\05684_Fungi_Basidiomycota_Agaricomycetes_Polyporales_Polyporaceae_Lentinus_arcularius\ccaa8a9b-3686-4603-ab15-d659b085522c.jpg,271,271,271 222 398 270 262,0.0612148307263851,Lentinus arcularius,True,True
+data\raw\val\03242_Animalia_Chordata_Aves_Anseriformes_Anatidae_Cygnus_cygnus\c9066374-da87-46b7-9ede-94d372c15c53.jpg,152,152,152 448 180 412 208,0.0641109123826026,Cygnus cygnus,True,True
+data\raw\val\02581_Animalia_Arthropoda_Insecta_Odonata_Libellulidae_Trithemis_annulata\5ee591ad-be8f-4108-9f0f-903e9d383a0c.jpg,117,117,117 16 116 291 33,0.0668996796011924,Trithemis annulata,True,True
+data\raw\val\04540_Animalia_Chordata_Aves_Strigiformes_Strigidae_Aegolius_acadicus\53b2294d-25b9-43f6-96f7-e95d015434d4.jpg,210,210,210 162 208 156 150,0.0680158585309982,Aegolius acadicus,True,True
+data\raw\val\03922_Animalia_Chordata_Aves_Passeriformes_Maluridae_Malurus_splendens\530078d1-a4cf-40de-a83a-293b52432218.jpg,177,177,177 187 191 479 348,0.0721483528614044,Malurus splendens,True,True
+data\raw\val\06558_Plantae_Tracheophyta_Magnoliopsida_Apiales_Araliaceae_Hydrocotyle_ranunculoides\7e34eea4-1a81-4ec2-b8e9-25964738784b.jpg,312,312,312 483 356 393 439,0.0726477652788162,Hydrocotyle ranunculoides,True,True
+data\raw\val\05567_Fungi_Basidiomycota_Agaricomycetes_Agaricales_Psathyrellaceae_Coprinopsis_variegata\8f153736-6a5d-43d2-a597-b9b0d107447a.jpg,262,262,262 223 142 140 139,0.0767534971237182,Coprinopsis variegata,True,True
+data\raw\val\00834_Animalia_Arthropoda_Insecta_Hymenoptera_Vespidae_Polistes_humilis\33548b3c-f2b2-442f-a2bc-45221faa3382.jpg,40,40,40 13 14 38 5,0.0805246457457542,Polistes humilis,True,True
+data\raw\val\07171_Plantae_Tracheophyta_Magnoliopsida_Boraginales_Boraginaceae_Myosotis_discolor\3d394a43-b433-4fa6-96db-c38b2c342dc7.jpg,339,339,339 30 15 121 450,0.0813446119427681,Myosotis discolor,True,True
+data\raw\val\05570_Fungi_Basidiomycota_Agaricomycetes_Agaricales_Psathyrellaceae_Panaeolus_foenisecii\c4e2617e-03a0-410f-862c-ce081edfb387.jpg,263,263,263 88 265 260 35,0.0821500718593597,Panaeolus foenisecii,True,True
+data\raw\val\09573_Plantae_Tracheophyta_Magnoliopsida_Sapindales_Sapindaceae_Acer_nigrum\cd42c39c-6472-4fe5-85e5-983213ceaafa.jpg,477,477,477 482 357 462 481,0.0826543867588043,Acer nigrum,True,True
+data\raw\val\05467_Fungi_Ascomycota_Sordariomycetes_Hypocreales_Nectriaceae_Nectria_cinnabarina\59702d3d-2ad3-4de1-93e5-020db2328584.jpg,259,259,259 83 151 264 163,0.0829407647252082,Nectria cinnabarina,True,True
+data\raw\val\02843_Animalia_Chordata_Actinopterygii_Perciformes_Labridae_Thalassoma_bifasciatum\2b000842-6212-4688-a6f1-3d99dca3b702.jpg,134,134,134 135 131 43 132,0.0869400799274444,Thalassoma bifasciatum,True,True
+data\raw\val\03402_Animalia_Chordata_Aves_Charadriiformes_Laridae_Chroicocephalus_ridibundus\65bad439-1763-46d8-9b27-3245f81653b0.jpg,158,158,158 204 152 217 128,0.0872309505939483,Chroicocephalus ridibundus,True,True
+data\raw\val\09001_Plantae_Tracheophyta_Magnoliopsida_Myrtales_Lythraceae_Lythrum_hyssopifolia\9414d227-81ec-41d7-86ec-9c5bc57d3f29.jpg,450,450,450 438 377 368 427,0.087930254638195,Lythrum hyssopifolia,True,True
+data\raw\val\09404_Plantae_Tracheophyta_Magnoliopsida_Rosales_Rosaceae_Photinia_serratifolia\13cbd704-7aa4-4e0e-8e05-9ed7b0a30e56.jpg,470,470,470 308 292 459 479,0.0883991792798042,Photinia serratifolia,True,True
+data\raw\val\00573_Animalia_Arthropoda_Insecta_Hemiptera_Coreidae_Thasus_neocalifornicus\a7dda64d-d660-4044-b86d-995d3a50a12b.jpg,29,29,29 435 363 451 308,0.0888417288661003,Thasus neocalifornicus,True,True
+data\raw\val\02941_Animalia_Chordata_Amphibia_Anura_Bombinatoridae_Bombina_variegata\da9bd2d0-e8d9-456b-8652-869e395ec70c.jpg,138,138,138 151 216 219 139,0.0911978259682655,Bombina variegata,True,True

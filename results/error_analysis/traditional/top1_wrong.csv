@@ -1,0 +1,21 @@
+image_path,true_idx,pred_idx,top5_idx,top1_confidence,true_species,top1_correct,top5_correct
+data\raw\val\08688_Plantae_Tracheophyta_Magnoliopsida_Lamiales_Plantaginaceae_Veronica_anagallis-aquatica\19cbeb7f-8862-4723-8d27-454873972404.jpg,429,257,257 11 344 256 480,0.2123681859651133,Veronica anagallis-aquatica,False,False
+data\raw\val\07042_Plantae_Tracheophyta_Magnoliopsida_Asterales_Asteraceae_Tetraneuris_scaposa\44b438ed-4839-49f8-99f0-d021d6291b50.jpg,337,328,328 337 315 329 370,0.1857905712824304,Tetraneuris scaposa,False,True
+data\raw\val\00211_Animalia_Arthropoda_Insecta_Coleoptera_Carabidae_Cicindela_scutellaris\e4f05168-2e4a-4803-84fc-8bc3d93b29c7.jpg,11,257,257 275 329 371 246,0.1851201585535417,Cicindela scutellaris,False,False
+data\raw\val\06409_Plantae_Tracheophyta_Liliopsida_Poales_Poaceae_Paspalum_urvillei\0b3cbe84-ea1e-436e-b121-91b374872ec7.jpg,305,306,306 305 446 293 213,0.1801455414547699,Paspalum urvillei,False,True
+data\raw\val\07609_Plantae_Tracheophyta_Magnoliopsida_Cornales_Hydrangeaceae_Hydrangea_quercifolia\eef78ed4-f19a-411f-97a4-63c56e80fe8e.jpg,357,462,462 357 482 345 311,0.164459216706336,Hydrangea quercifolia,False,True
+data\raw\val\09468_Plantae_Tracheophyta_Magnoliopsida_Rosales_Rosaceae_Rubus_laciniatus\bcd64498-6b44-4dae-b814-b2732846e912.jpg,473,415,415 473 499 411 410,0.1551212320464449,Rubus laciniatus,False,True
+data\raw\val\09636_Plantae_Tracheophyta_Magnoliopsida_Saxifragales_Grossulariaceae_Ribes_rubrum\e8469c79-bc9b-4d3a-9efa-d9bec5fa8e71.jpg,481,462,462 311 312 481 383,0.1484257549021606,Ribes rubrum,False,True
+data\raw\val\07324_Plantae_Tracheophyta_Magnoliopsida_Caryophyllales_Amaranthaceae_Celosia_argentea\7821818e-b656-4268-8322-58b9569a8f81.jpg,346,373,373 408 324 419 407,0.1440428006665798,Celosia argentea,False,False
+data\raw\val\08386_Plantae_Tracheophyta_Magnoliopsida_Geraniales_Geraniaceae_Geranium_sibiricum\3f79829f-c5d7-45a4-96d7-59c086d6048f.jpg,411,462,462 411 345 310 37,0.1435254555544242,Geranium sibiricum,False,True
+data\raw\val\09139_Plantae_Tracheophyta_Magnoliopsida_Proteales_Proteaceae_Protea_repens\9821a387-82e7-41ed-9bc4-7d802f338f2e.jpg,459,498,498 459 303 494 375,0.1426066281831695,Protea repens,False,True
+data\raw\val\02414_Animalia_Arthropoda_Insecta_Odonata_Corduliidae_Epitheca_princeps\a0814a47-836e-4617-9a6c-252d2784afc1.jpg,108,154,154 158 155 216 152,0.1395832525824705,Epitheca princeps,False,False
+data\raw\val\09907_Plantae_Tracheophyta_Polypodiopsida_Polypodiales_Aspleniaceae_Asplenium_viride\191baff8-0c06-47e6-98c9-e8473f81e98b.jpg,492,257,257 492 480 145 422,0.1361419672160358,Asplenium viride,False,True
+data\raw\val\05567_Fungi_Basidiomycota_Agaricomycetes_Agaricales_Psathyrellaceae_Coprinopsis_variegata\51399753-2404-4b53-9892-f260e9cb5822.jpg,262,268,268 262 272 260 223,0.1300845658412114,Coprinopsis variegata,False,True
+data\raw\val\00666_Animalia_Arthropoda_Insecta_Hemiptera_Ricaniidae_Scolypopa_australis\0e88b725-817f-4bea-b33f-b6d9cd3be0fc.jpg,32,221,221 27 247 283 253,0.1274560786510043,Scolypopa australis,False,False
+data\raw\val\09192_Plantae_Tracheophyta_Magnoliopsida_Ranunculales_Papaveraceae_Stylophorum_diphyllum\f5209b20-78a8-4933-a7af-276f969ba587.jpg,462,411,411 462 317 415 311,0.12704282961816,Stylophorum diphyllum,False,True
+data\raw\val\07609_Plantae_Tracheophyta_Magnoliopsida_Cornales_Hydrangeaceae_Hydrangea_quercifolia\e92fc35b-2a3a-4b4c-871b-117568a435f8.jpg,357,462,462 357 311 37 472,0.1231562754973546,Hydrangea quercifolia,False,True
+data\raw\val\01938_Animalia_Arthropoda_Insecta_Lepidoptera_Nymphalidae_Nymphalis_antiopa\1f36558f-7636-4e75-b265-72f68ec64c09.jpg,87,247,247 229 64 235 7,0.121347044470579,Nymphalis antiopa,False,False
+data\raw\val\06293_Plantae_Tracheophyta_Liliopsida_Poales_Cyperaceae_Schoenoplectus_acutus\099819fb-698e-40b8-99ec-5c719a6aa865.jpg,300,355,355 300 151 180 188,0.1209808091383054,Schoenoplectus acutus,False,True
+data\raw\val\05917_Plantae_Tracheophyta_Liliopsida_Asparagales_Asparagaceae_Nolina_parryi\ba5236b7-b41b-4351-9d10-f882e4cf6190.jpg,283,188,188 300 278 192 151,0.1166268905078819,Nolina parryi,False,False
+data\raw\val\09573_Plantae_Tracheophyta_Magnoliopsida_Sapindales_Sapindaceae_Acer_nigrum\c6124b1d-0aec-4d31-8405-3f5977f69475.jpg,477,253,253 221 283 151 150,0.1157897675387217,Acer nigrum,False,False
