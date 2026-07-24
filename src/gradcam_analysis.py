@@ -170,6 +170,45 @@ def extract_species_from_image_path(image_path: str) -> str:
     return class_folder
 
 
+def build_class_idx_to_species(predictions_path: Path) -> dict[int, str]:
+    """
+    根据完整预测 CSV 中的图片路径，建立类别编号到物种名称的映射。
+
+    图片所在文件夹包含完整分类信息，文件夹名称最后两个字段
+    通常分别是属名和种名，因此可以得到真正的物种名称。
+    """
+    if not predictions_path.exists():
+        raise FileNotFoundError(
+            "Prediction CSV was not found:\n"
+            f"{predictions_path}"
+        )
+
+    predictions = pd.read_csv(predictions_path)
+
+    required_columns = {"image_path", "true_idx"}
+    missing_columns = required_columns - set(predictions.columns)
+
+    if missing_columns:
+        raise ValueError(
+            "Prediction CSV is missing columns: "
+            f"{sorted(missing_columns)}"
+        )
+
+    class_idx_to_species = {}
+
+    for _, row in predictions.iterrows():
+        class_idx = int(row["true_idx"])
+
+        if class_idx not in class_idx_to_species:
+            class_idx_to_species[class_idx] = (
+                extract_species_from_image_path(
+                    str(row["image_path"])
+                )
+            )
+
+    return class_idx_to_species
+
+
 def get_device() -> torch.device:
     """
     自动选择 CUDA、Apple MPS 或 CPU。
@@ -933,7 +972,7 @@ def analyse_single_example(
     gradcam: GradCAM,
     device: torch.device,
     image_size: int,
-    idx_to_class: dict[int, str],
+    class_idx_to_species: dict[int, str],
     example_index: int,
 ) -> dict:
     """
@@ -968,18 +1007,15 @@ def analyse_single_example(
         row.get("pred_idx", predicted_class)
     )
 
-    true_name = extract_species_name(
-        idx_to_class.get(
-            true_idx,
-            f"class_{true_idx}",
-        )
+    # 真实类别直接从当前图片路径中提取准确的物种名称
+    true_name = extract_species_from_image_path(
+        raw_image_path
     )
 
-    pred_name = extract_species_name(
-        idx_to_class.get(
-            predicted_class,
-            f"class_{predicted_class}",
-        )
+    # 预测类别通过完整预测结果建立的映射转换成物种名称
+    pred_name = class_idx_to_species.get(
+        predicted_class,
+        f"class_{predicted_class}",
     )
 
     overlay = create_overlay(
@@ -1129,6 +1165,11 @@ def main() -> None:
         IDX_TO_CLASS_PATH
     )
 
+    # 根据预测 CSV 的图片路径建立类别编号到真实物种名称的映射
+    class_idx_to_species = build_class_idx_to_species(
+        PREDICTIONS_CSV
+    )
+
     # ResNet18 最后一个卷积阶段的最后一个残差块
     target_layer = model.layer4[-1]
 
@@ -1176,7 +1217,7 @@ def main() -> None:
                     gradcam=gradcam,
                     device=device,
                     image_size=image_size,
-                    idx_to_class=idx_to_class,
+                    class_idx_to_species=class_idx_to_species,
                     example_index=example_index,
                 )
 
@@ -1297,8 +1338,16 @@ def main() -> None:
         index=False,
     )
 
+    # Count unique Grad-CAM figure paths because each confused pair has two CSV records
+    # but shares one combined comparison figure.
+    num_figures = results_dataframe["gradcam_figure"].nunique()
+    num_matches = results_dataframe["prediction_matches_csv"].sum()
+    num_records = len(results_dataframe)
+
     print("\nGrad-CAM analysis completed.")
-    print(f"Generated figures: {len(results_dataframe)}")
+    print(f"Generated figures: {num_figures}")
+    print(f"Summary records: {num_records}")
+    print(f"Predictions matching CSV: {num_matches}/{num_records}")
     print(f"Summary CSV: {summary_path}")
     print(f"Figure directory: {OUTPUT_FIGURE_ROOT}")
 

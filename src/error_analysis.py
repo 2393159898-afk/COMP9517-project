@@ -3,6 +3,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from PIL import Image
 
 
 # ============================================================
@@ -23,7 +24,7 @@ ANALYSIS_OUTPUT_ROOT = PROJECT_ROOT / "results/error_analysis"
 # 所有生成图片的输出目录
 FIGURE_OUTPUT_ROOT = PROJECT_ROOT / "results/figures/error_analysis"
 
-# 每类案例最多保存的样本数量
+# 每类案例最多导出 20 条代表样本；完整统计仍使用全部预测结果
 NUM_EXAMPLES = 20
 
 # confusion matrix 展示错误最多的类别数量
@@ -116,12 +117,159 @@ def save_case_samples(samples, output_path, num_examples=NUM_EXAMPLES):
 
     samples.head(num_examples)[columns_to_save].to_csv(output_path, index=False)
 
+def resolve_image_path(image_path):
+    """
+    将预测 CSV 中的图片路径转换成本地可读取的路径。
+
+    CSV 可能使用 Windows 风格的反斜杠，
+    因此统一转换成当前项目下的相对路径。
+    """
+    normalised_path = str(image_path).replace("\\", "/")
+    resolved_path = PROJECT_ROOT / normalised_path
+
+    if not resolved_path.exists():
+        raise FileNotFoundError(
+            "Cannot find image for example gallery:\n"
+            f"{resolved_path}"
+        )
+
+    return resolved_path
+
+
+def plot_example_gallery(
+    model_name,
+    case_groups,
+    class_name_map,
+    output_path,
+    figure_title,
+    num_examples_per_case=2,
+):
+    """
+    为成功或失败案例生成原图总览。
+
+    每种案例默认展示 2 张代表图片。
+    如果某类案例为空，则自动跳过该类别。
+    """
+    non_empty_groups = [
+        (case_label, samples)
+        for case_label, samples in case_groups
+        if not samples.empty
+    ]
+
+    if not non_empty_groups:
+        print(
+            f"[Warning] No samples available for gallery: "
+            f"{figure_title}"
+        )
+        return
+
+    num_rows = len(non_empty_groups)
+    num_columns = num_examples_per_case
+
+    figure, axes = plt.subplots(
+        num_rows,
+        num_columns,
+        figsize=(6 * num_columns, 5.5 * num_rows),
+    )
+
+    # 保证 axes 始终是二维数组，方便统一索引
+    axes = np.asarray(axes)
+
+    if num_rows == 1:
+        axes = axes.reshape(1, -1)
+
+    if num_columns == 1:
+        axes = axes.reshape(-1, 1)
+
+    # for row_index, (case_label, samples) in enumerate(
+    #     non_empty_groups
+    # ):
+    #     selected_samples = samples.head(
+    #         num_examples_per_case
+    #     )
+
+    used_image_paths = set()
+
+    for row_index, (case_label, samples) in enumerate(
+        non_empty_groups
+    ):
+        # 排除已经在前面类别中展示过的图片，避免 gallery 内重复
+        available_samples = samples[
+            ~samples["image_path"].astype(str).isin(used_image_paths)
+        ]
+
+        selected_samples = available_samples.head(
+            num_examples_per_case
+        )
+
+        used_image_paths.update(
+            selected_samples["image_path"].astype(str).tolist()
+        )
+
+        for column_index in range(num_columns):
+            axis = axes[row_index, column_index]
+            axis.axis("off")
+
+            if column_index >= len(selected_samples):
+                continue
+
+            sample = selected_samples.iloc[column_index]
+
+            image_path = resolve_image_path(
+                sample["image_path"]
+            )
+
+            with Image.open(image_path) as image_file:
+                original_image = image_file.convert("RGB")
+
+            true_idx = int(sample["true_idx"])
+            pred_idx = int(sample["pred_idx"])
+
+            true_species = str(sample["true_species"])
+            pred_species = class_name_map.get(
+                pred_idx,
+                f"class_{pred_idx}",
+            )
+
+            confidence = float(
+                sample["top1_confidence"]
+            )
+
+            axis.imshow(original_image)
+
+            axis.set_title(
+                f"{case_label}\n"
+                f"True: {true_species}\n"
+                f"Predicted: {pred_species}\n"
+                f"Confidence: {confidence:.4f}",
+                fontsize=10,
+                pad=12,
+            )
+
+    figure.suptitle(
+        f"{model_name.capitalize()}: {figure_title}",
+        fontsize=15,
+    )
+
+    plt.tight_layout(
+        rect=[0, 0, 1, 0.96],
+        h_pad=4.0,
+        w_pad=2.0,
+    )
+
+    plt.savefig(
+        output_path,
+        dpi=300,
+        bbox_inches="tight",
+    )
+
+    plt.close(figure)
 
 # ============================================================
 # 3. 单个模型的案例分析
 # ============================================================
 
-def analyse_prediction_cases(model_name, predictions, model_output_dir):
+def analyse_prediction_cases( model_name, predictions, model_output_dir, model_figure_dir):
     """
     提取并保存一个模型的不同类型预测案例。
     """
@@ -247,6 +395,69 @@ def analyse_prediction_cases(model_name, predictions, model_output_dir):
 
     print(f"\n[{model_name}] Case analysis")
     print(case_summary.to_string(index=False))
+
+    # 建立类别编号到物种名称的映射，
+    # 用于在 gallery 中显示预测物种名称
+    class_name_map = (
+        predictions[["true_idx", "true_species"]]
+        .drop_duplicates("true_idx")
+        .set_index("true_idx")["true_species"]
+        .to_dict()
+    )
+
+    # --------------------------------------------------------
+    # 成功案例原图总览
+    # --------------------------------------------------------
+    success_case_groups = [
+        ("Top-1 Correct", correct_samples),
+        (
+            "High-confidence Correct",
+            high_confidence_correct,
+        ),
+        (
+            "Difficult but Correct",
+            difficult_correct,
+        ),
+    ]
+
+    plot_example_gallery(
+        model_name=model_name,
+        case_groups=success_case_groups,
+        class_name_map=class_name_map,
+        output_path=(
+            model_figure_dir
+            / "successful_examples_gallery.png"
+        ),
+        figure_title="Successful Prediction Examples",
+        num_examples_per_case=2,
+    )
+
+    # --------------------------------------------------------
+    # 失败案例原图总览
+    # --------------------------------------------------------
+    failure_case_groups = [
+        ("Top-1 Wrong", wrong_samples),
+        (
+            "Top-1 Wrong but Top-5 Correct",
+            top1_wrong_top5_correct,
+        ),
+        (
+            "High-confidence Wrong",
+            high_confidence_wrong,
+        ),
+    ]
+
+    plot_example_gallery(
+        model_name=model_name,
+        case_groups=failure_case_groups,
+        class_name_map=class_name_map,
+        output_path=(
+            model_figure_dir
+            / "failure_examples_gallery.png"
+        ),
+        figure_title="Failure Prediction Examples",
+        num_examples_per_case=2,
+    )
 
 
 # ============================================================
@@ -524,7 +735,7 @@ def plot_confidence_distribution(model_name, predictions, model_figure_dir):
 
 def calculate_model_summary(model_name, predictions):
     """
-    计算一个模型在 clean validation set 上的主要 Error Analysis 指标。
+    计算一个模型在 clean test set 上的主要 Error Analysis 指标。
     """
 
     total_samples = len(predictions)
@@ -604,7 +815,7 @@ def plot_model_comparison(summary_df):
     plt.ylim(0, 1)
     plt.ylabel("Accuracy")
     plt.xlabel("Model")
-    plt.title("Clean Validation Performance Comparison")
+    plt.title("Clean Test Performance Comparison")
 
     # 在每个柱子上方显示具体准确率
     for bar in top1_bars:
@@ -685,6 +896,7 @@ def main():
             model_name,
             predictions,
             model_output_dir,
+            model_figure_dir,
         )
 
         # 分析模型最容易混淆的类别组合
